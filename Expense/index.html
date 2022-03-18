@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Expense Tracker App</title>
+    <link href="https://fonts.googleapis.com/css?family=Titillium+Web&display=swap" 
+        rel="stylesheet">
+    <style>
+        *{
+    margin:0;
+    font-family: 'Titillium Web', sans-serif;
+}
+
+body{
+    background:#042159;
+    color:#77D9AB;
+}
+
+.title{
+    width: 500px;
+    color:#0869A6;
+    margin:3% auto;
+}
+
+.content{
+    width: 580px;
+    margin: 0 auto;
+    background-color:#0869A6;
+    padding: 3%;
+    padding-left: 6%;
+}
+
+.secondTitle{
+    text-align:left;
+    margin: 2% 0;
+    font-weight: 100;
+}
+
+.form{
+    padding: 5px;
+}
+
+.formLine{
+    display: inline-flex;
+    padding: 5px 0px;
+}
+
+.left{
+    float: left;
+}
+
+.right{
+    float:right;
+    margin-right: 100px;
+}
+
+input, select{
+    width: 130px;
+    margin-left: 10px;
+}
+
+/* table style */
+table{
+    width: 100%;
+}
+
+thead{
+    background-color:#042159;
+    line-height: 30px;
+}
+
+/* Button */
+
+button{
+    width: 200px;
+    color:#fff; 
+    padding: 10px;
+    text-align: center;
+    font-size: 1.1em;
+    line-height: 20px;
+    background-color: #04BF8A;
+    border-radius: 5px;
+    margin: 14px 25%;
+    cursor: pointer;
+}
+
+a{
+    text-decoration: underline;
+    cursor: pointer;
+}
+    </style>
+</head>
+<body>
+    <header>
+        <h1 class="title">Expense Tracker App</h1>
+    <header>
+
+    <section class="content">
+        <h3 class="secondTitle">Add a new item: </h3>
+        <div class="form">
+            <form id="expForm">
+                <div class="formLine left">
+                    <span for="type">Type:</span>
+                    <select id="type">
+                        <option value="chooseOne">Choose one...</option>
+                        <option value="Card">Card</option>
+                        <option value="Cash">Cash</option>
+                        <option value="Cryptocoin">Cryptocoin</option>
+                        <option value="Other">Other</option>
+                    </select>
+                </div>
+                <div class="formLine right">
+                    <span for="name">Name:</span>
+                    <input type="text" id="name">
+                </div>
+
+                <div class="formLine left">
+                    <span for="date">Date:</span>
+                    <input type="date" id="date">
+                </div>
+                <div class="formLine right">
+                    <span for="amount">Amount:</span>
+                    <input type="text" id="amount">
+                </div>
+                <button type="submit" class="buttonSave">Add a new expense</button>
+            </form>
+        </div>
+    </section>
+    <section class="content">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Date</th>
+                    <th>Amount</th>
+                    <th>Options</th>
+                </tr>
+            </thead>
+            <tbody id="expenseTable">
+
+            </tbody>
+        </table>
+    </section>
+    <script src="app.js"></script>
+</body>
+</html>
